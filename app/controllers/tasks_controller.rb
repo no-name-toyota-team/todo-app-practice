@@ -18,6 +18,15 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    @task.update(content: params[:task][:content])
+    redirect_to tasks_path
+  end
+
   def destroy
     @task.destroy
     redirect_to tasks_path
