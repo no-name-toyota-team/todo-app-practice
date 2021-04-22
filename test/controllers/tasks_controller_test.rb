@@ -9,4 +9,9 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     get root_url
     assert_response :success
   end
+
+  test "shoud_get_new" do
+    get "/tasks/new"
+    assert_response :success
+  end
 end
